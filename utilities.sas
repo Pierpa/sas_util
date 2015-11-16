@@ -10,8 +10,8 @@
 /**
  *    	Conta il numero di righe in un dataset
  *  
- *    	@param  	ds  	  Dataset sas
- *		@return 	nobs      Numero di righe nel dataset 			
+ *		@param  	ds			Dataset sas
+ *		@return		nobs		Numero di righe nel dataset 			
  */
 %macro nobs(ds=);
 	%let DSID=%sysfunc(OPEN(&ds.,IN));
