@@ -11,7 +11,7 @@
  *      Conta il numero di righe in un dataset
  *  
  *      @param      ds      Dataset sas
- *      @return     nobs        Numero di righe nel dataset             
+ *      @return     nobs    Numero di righe nel dataset             
  */
 %macro nobs(ds=);
     %let DSID=%sysfunc(OPEN(&ds.,IN));
@@ -78,7 +78,7 @@
  *      legge tutti i file xml 
  *  
  *  @param      table2read          tabella sas da leggere
- *  @param      table2write     tabella sas in scrittura
+ *  @param      table2write         tabella sas in scrittura
  *  @param      path2map_xml        path assoluto della mappa xml
  *  @param      map_table2read      tabella da leggere nella mappa xml  
  */
