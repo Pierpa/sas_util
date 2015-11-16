@@ -10,7 +10,7 @@
 /**
  *    	Conta il numero di righe in un dataset
  *  
- *		@param  	ds			Dataset sas
+ *		@param  	ds		Dataset sas
  *		@return		nobs		Numero di righe nel dataset 			
  */
 %macro nobs(ds=);
@@ -24,8 +24,8 @@
  *    	Restituisce varie informazioni per ogni file presente in una certa cartella
  *  
  *    	@param  	path2file  	  	path assoluto dove sono i file ad esempio in questa forma /path/to/file/
- *		@param		name 			nome del file con estensione va bene anche star.xml per prendere tutti i file
- *		@param 		lib2write      	tabella sas di scrittura			
+ *	@param		name 			nome del file con estensione va bene anche star.xml per prendere tutti i file
+ *	@param 		lib2write      		tabella sas di scrittura			
  */
 %macro info_file(path2file=, name= ,lib2write=);
 	/*filename di appoggio alla pipe*/
@@ -52,7 +52,7 @@
  *    	Restituisce varie informazioni riguardanti una certa cartella di hadoop
  *  
  *    	@param  	path_hadoop  	path assoluto di hadoop 
- *		@param 		lib2write      	tabella sas di scrittura			
+ *	@param 		lib2write      	tabella sas di scrittura			
  */
 %macro info_hadoop(path_hadoop=, lib2write=);
 	filename dirList pipe "hadoop fs -ls &path_hadoop. | tail -n +2 ";
@@ -77,10 +77,10 @@
 /**
  *    	legge tutti i file xml 
  *  
- *    	@param  	table2read  	tabella sas da leggere
- *		@param 		table2write		tabella sas in scrittura
- *		@param 		path2map_xml    path assoluto della mappa xml
- *		@param		map_table2read	tabella da leggere nella mappa xml	
+ *    	@param  	table2read  		tabella sas da leggere
+ *	@param 		table2write		tabella sas in scrittura
+ *	@param 		path2map_xml    	path assoluto della mappa xml
+ *	@param		map_table2read		tabella da leggere nella mappa xml	
  */
 %macro readXml(table2read=, table2write=, path2map_xml=, map_table2read=);
 	
